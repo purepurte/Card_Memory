@@ -1,12 +1,12 @@
 #panel {
-    width: 310px;
-    height: 340px;
+    width: 640px;
+    height: 580px;
     overflow: hidden;
 }
 
 .card {
-    width: 60px;
-    height: 80px;
+    width: 120px;
+    height: 160px;
     line-height: 80px;
     border: 1px solid silver;
     border-radius: 10px;
