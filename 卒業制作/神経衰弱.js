@@ -118,7 +118,7 @@ function turn(e){
         flgFirst = true;
     }  
 }
-// タイマー開
+// タイマー開始
 function startTimer(){
     timer = setInterval(showSecond, 1000);
 }
