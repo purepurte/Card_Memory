@@ -72,7 +72,7 @@ function turn(e){
     // 裏向きのカードをクリックした場合は数字を表示する
     if (div.innerHTML == ''){
         div.className = 'card';
-        div.innerHTML = div.number; 
+        div.innerHTML = '<img src="test.png" />'; 
     }else{
         // 数字が表示されているカードは return
         return;
