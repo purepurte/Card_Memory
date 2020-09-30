@@ -18,7 +18,7 @@
     float: left;
     cursor: pointer;
 }
-/* 裏の状態 */　裏の状態
+/* 裏の状態 */
 .back {
     background-image: url('img/back.png');
     background-size: 60px 80px;
