@@ -20,8 +20,8 @@
 }
 /* 裏の状態 */
 .back {
-    background-image: url('img/back.png');
-    background-size: 60px 80px;
+    background-image: url('Back_side.png');
+    background-size: 120px 160px;
 }
 /* 終了時 */
 .finish {
