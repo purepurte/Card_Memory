@@ -1,3 +1,26 @@
+cards = [
+    ["織田信長カード.jpg", "織田信長の説明文.jpg"], //cards[0][0], [0][1]のセット
+    ["真田幸村カード.jpg", "真田幸村の説明文.jpg"], //cards[1][0], [1][1]のセット
+    ["豊臣秀吉カード.jpg", "豊臣秀吉の説明文.jpg"], //cards[2][0], [2][1]のセット
+    ["上杉謙信カード.jpg", "上杉謙信の説明文.jpg"], //cards[3][0], [3][1]のセット
+    ["徳川家康カード.jpg", "徳川家康の説明文.jpg"], //cards[4][0], [4][1]のセット
+    ["武田信玄カード.jpg", "武田信玄の説明文.jpg"], //cards[5][0], [5][1]のセット
+    ["伊達政宗カード.jpg", "伊達政宗の説明文.jpg"], //cards[6][0], [6][1]のセット
+    ["明智光秀カード.jpg", "明智光秀の説明文.jpg"], //cards[7][0], [7][1]のセット
+  ];
+
+  shuffled_cards = [];
+
+// すべてのカードをshuffled cardsに順番に追加
+for (var i=0; i<8; i++) { // 人物番号
+    for (var j=0; j<2; j++) { // 画像or文章の番号
+      shuffled_cards.push(cards[i][j]); // カードをshuffled_cardsに追加
+    }
+  }
+  //--- ここまで
+  //--- カードのシャッフル処理
+  shuffled_cards = shuffled_cards.sort(function() { return Math.random() - .5;  });
+
 // グローバル
 // div要素を格納
 var cards = [];
