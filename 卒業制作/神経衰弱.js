@@ -1,7 +1,7 @@
 cards = [
-  ["織田信長.png", "織田信長の説明文.jpg"], //cards[0][0], [0][1]のセット
-  ["真田幸村.png", "真田幸村の説明文.jpg"], //cards[1][0], [1][1]のセット
-  ["豊臣秀吉.png", "豊臣秀吉の説明文.jpg"], //cards[2][0], [2][1]のセット
+  ["織田信長.png", "織田信長の説明文.png"], //cards[0][0], [0][1]のセット
+  ["真田幸村.png", "真田幸村の説明文.png"], //cards[1][0], [1][1]のセット
+  ["豊臣秀吉.png", "豊臣秀吉の説明文.png"], //cards[2][0], [2][1]のセット
 //  ["上杉謙信.png", "上杉謙信の説明文.jpg"], //cards[3][0], [3][1]のセット
 //  ["徳川家康.png", "徳川家康の説明文.jpg"], //cards[4][0], [4][1]のセット
 //  ["武田信玄.png", "武田信玄の説明文.jpg"], //cards[5][0], [5][1]のセット
@@ -54,12 +54,15 @@ window.onload = function(){
 }
 
 function setCardDataToDiv(div, card) {
-  var data = document.createElement('img');
-  data.style.display = 'none';
-  data.src = "./仮カード/" + card;
-  div.appendChild(data);
+  var img = document.createElement('img');
+  img.style.display = 'none';
+  img.src = "./仮カード/" + card;
+  div.appendChild(img);
 
-  return div;
+  var span = document.createElement('span');
+  span.style.display = 'none';
+  span.innerHTML = card;
+  div.appendChild(span);
 }
 
 // クリック時の処理
@@ -91,9 +94,14 @@ function turn(e){
 
     // 2枚目の処理
   }else{
-
     // 数字が1枚目と一致する場合
-    if (cardFirst.number == div.number){
+    var firstCardImg = cardFirst.querySelector('img');
+    var secondCardImg = div.querySelector('img');
+    var firstCardImgFilename = cardFirst.querySelector('span').innerHTML.replace(/の説明文/, "");
+    var secondCardImgFilename = div.querySelector('span').innerHTML.replace(/の説明文/, "");
+
+    console.info(firstCardImgFilename, secondCardImgFilename);
+    if (firstCardImgFilename.indexOf(secondCardImgFilename) == 0){
       countUnit++;
       // 見えない状態にする
       backTimer = setTimeout(function(){
@@ -110,10 +118,10 @@ function turn(e){
     }else{
       // カードを裏側に戻す
       backTimer = setTimeout(function(){
+        firstCardImg.style.display = 'none';
+        secondCardImg.style.display = 'none';
         div.className = 'card back';
-        div.innerHTML = '';
         cardFirst.className = 'card back';
-        cardFirst.innerHTML = '';
         cardFirst = null;
         backTimer = NaN;
       }, 500);
