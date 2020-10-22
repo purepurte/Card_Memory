@@ -1,12 +1,13 @@
 #panel {
-    width: 640px;
-    height: 580px;
+    width: 1024px;
+    height: 768px;
     overflow: hidden;
+    background-color: purple;
 }
 
 .card {
-    width: 120px;
-    height: 160px;
+    width: 240px;
+    height: 320px;
     line-height: 80px;
     border: 1px solid silver;
     border-radius: 10px;
@@ -21,7 +22,7 @@
 /* 裏の状態 */
 .back {
     background-image: url('Back_side.png');
-    background-size: 120px 160px;
+    background-size: 240px 320px;
 }
 /* 終了時 */
 .finish {
