@@ -1,6 +1,6 @@
 #panel {
-    width: 1500px;
-    height: 500px;
+    width: 2100px;
+    height: 750px;
     overflow: hidden;
     background-color: white;
 }
@@ -31,6 +31,6 @@
 }
 /* 経過秒数 */
 #result {
-    font-size: 1.2em;
+    font-size: 2.5em;
     font-weight: bold;
 }
