@@ -103,17 +103,7 @@ function turn(e){
     console.info(firstCardImgFilename, secondCardImgFilename);
     if (firstCardImgFilename.indexOf(secondCardImgFilename) == 0){
       countUnit++;
-      // 見えない状態にする
-      backTimer = setTimeout(function(){
-        div.className = 'card finish';
-        cardFirst.className = 'card finish';
-        backTimer = NaN;
-
-        if (countUnit == 10){
-          clearInterval(timer);  // timer終了
-        }
-      }, 500)
-
+     
       // 一致しない場合
     }else{
       // カードを裏側に戻す
