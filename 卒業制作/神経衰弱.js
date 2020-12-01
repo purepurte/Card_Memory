@@ -122,7 +122,7 @@ function turn(e){
         cardFirst.className = 'card back';
         cardFirst = null;
         backTimer = NaN;
-      }, 500);
+      }, 1500);
     }
 
     flgFirst = true;
