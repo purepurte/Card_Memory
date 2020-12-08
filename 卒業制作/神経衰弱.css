@@ -9,8 +9,7 @@
     width: 180px;
     height: 240px;
     line-height: 80px;
-    border: 1px solid black
-    r;
+    border: 1px solid black;
     border-radius: 10px;
     text-align: center;
     font-size: 26px;
@@ -19,6 +18,10 @@
     background: white;
     float: left;
     cursor: pointer;
+}
+
+div.correct {
+    border: 5px solid yellow;
 }
 /* 裏の状態 */
 .back {

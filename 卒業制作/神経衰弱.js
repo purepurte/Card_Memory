@@ -2,6 +2,7 @@ cards = [
   ["織田信長.png", "織田信長の説明文.png"], //cards[0][0], [0][1]のセット
   ["真田幸村.png", "真田幸村の説明文.png"], //cards[1][0], [1][1]のセット
   ["豊臣秀吉.png", "豊臣秀吉の説明文.png"], //cards[2][0], [2][1]のセット
+  /*
   ["上杉謙信.png", "上杉謙信の説明文.png"], //cards[3][0], [3][1]のセット
   ["徳川家康.png", "徳川家康の説明文.png"], //cards[4][0], [4][1]のセット
   ["武田信玄.png", "武田信玄の説明文.png"], //cards[5][0], [5][1]のセット
@@ -15,6 +16,7 @@ cards = [
   ["足利義輝.png", "足利義輝の説明文.png"], //cards[13][0], [13][1]のセット
   ["徳川慶喜.png", "徳川慶喜の説明文.png"], //cards[14][0], [14][1]のセット
   ["徳川吉宗.png", "徳川吉宗の説明文.png"], //cards[15][0], [15][1]のセット
+  */
 ];
 
 // 開始時間
@@ -110,6 +112,8 @@ function turn(e){
 
     console.info(firstCardImgFilename, secondCardImgFilename);
     if (firstCardImgFilename.indexOf(secondCardImgFilename) == 0){
+      cardFirst.className += ' correct';
+      div.className += ' correct';
       countUnit++;
      
       // 一致しない場合
