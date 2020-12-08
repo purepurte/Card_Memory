@@ -21,7 +21,7 @@
 }
 
 div.correct {
-    border: 5px solid yellow;
+    border: 3px solid rgb(0, 17, 255);
 }
 /* 裏の状態 */
 .back {
