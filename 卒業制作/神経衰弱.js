@@ -113,7 +113,9 @@ function turn(e){
       cardFirst.className += ' correct';
       div.className += ' correct';
       countUnit++;
-     
+      if (countUnit == cards.length){
+        clearInterval(timer);  // timer終了
+        }
       // 一致しない場合
     }else{
       // カードを裏側に戻す
