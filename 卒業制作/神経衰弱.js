@@ -2,7 +2,7 @@ cards = [
   ["織田信長.png", "織田信長の説明文.png"], //cards[0][0], [0][1]のセット
   ["真田幸村.png", "真田幸村の説明文.png"], //cards[1][0], [1][1]のセット
   ["豊臣秀吉.png", "豊臣秀吉の説明文.png"], //cards[2][0], [2][1]のセット
- /* ["上杉謙信.png", "上杉謙信の説明文.png"], //cards[3][0], [3][1]のセット
+  ["上杉謙信.png", "上杉謙信の説明文.png"], //cards[3][0], [3][1]のセット
   ["徳川家康.png", "徳川家康の説明文.png"], //cards[4][0], [4][1]のセット
   ["武田信玄.png", "武田信玄の説明文.png"], //cards[5][0], [5][1]のセット
   ["伊達政宗.png", "伊達政宗の説明文.png"], //cards[6][0], [6][1]のセット
@@ -14,7 +14,7 @@ cards = [
   ["徳川綱吉.png", "徳川綱吉の説明文.png"], //cards[12][0], [12][1]のセット
   ["足利義輝.png", "足利義輝の説明文.png"], //cards[13][0], [13][1]のセット
   ["徳川慶喜.png", "徳川慶喜の説明文.png"], //cards[14][0], [14][1]のセット
-  ["徳川吉宗.png", "徳川吉宗の説明文.png"],*/ //cards[15][0], [15][1]のセット
+  ["徳川吉宗.png", "徳川吉宗の説明文.png"], //cards[15][0], [15][1]のセット
 ];
 
 // 開始時間
@@ -114,14 +114,11 @@ function turn(e){
       div.className += ' correct';
       countUnit++;
       if (countUnit == cards.length){
-        clearInterval(timer);  // timer終了
-       //各種ボタン要素を取得しておく
+         finish(); 
+       
 var dialog = document.getElementById('dialog');
-var btn = document.getElementById('btn');
 var yes = document.getElementById('yes');
-var no = document.getElementById('no');
-var cancel = document.getElementById('cancel');
- 
+var no = document.getElementById('no'); 
  
 //ボタンがクリックされたらダイアログを表示する
 btn.addEventListener('click', function() {
@@ -167,4 +164,10 @@ function showSecond(){
 
   var re = document.getElementById('result');
   re.innerHTML = str;
+}
+
+function finish(){
+  clearInterval(timer);
+  var btn = document.getElementById('btn');
+  btn.style.display = 'block';
 }
