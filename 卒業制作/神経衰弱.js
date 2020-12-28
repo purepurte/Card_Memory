@@ -75,6 +75,7 @@ function setCardDataToDiv(div, card) {
 
 // クリック時の処理
 function turn(e){
+         finish(); return;
   var div = e.target;
 
   // カードのタイマー処理が動作中は return
@@ -116,24 +117,6 @@ function turn(e){
       if (countUnit == cards.length){
          finish(); 
        
-var dialog = document.getElementById('dialog');
-var yes = document.getElementById('yes');
-var no = document.getElementById('no'); 
- 
-//ボタンがクリックされたらダイアログを表示する
-btn.addEventListener('click', function() {
-    dialog.style.display = 'block';
-    this.style.display = 'none';
-})
-yes.addEventListener('click', function closeWindow() {
-  window.open('about:_blank', '_self').close()
-});
- 
-
-no.addEventListener('click', function koshin(){
-  location.reload();
-});
-
     }
       // 一致しない場合
     }else{
@@ -170,4 +153,21 @@ function finish(){
   clearInterval(timer);
   var btn = document.getElementById('btn');
   btn.style.display = 'block';
+  var dialog = document.getElementById('dialog');
+  var yes = document.getElementById('yes');
+  var no = document.getElementById('no'); 
+
+  //ボタンがクリックされたらダイアログを表示する
+  btn.addEventListener('click', function() {
+    dialog.style.display = 'block';
+    this.style.display = 'none';
+  })
+  yes.addEventListener('click', function closeWindow() {
+    window.open('about:_blank', '_self').close()
+  });
+
+
+  no.addEventListener('click', function koshin(){
+    location.reload();
+  });
 }
