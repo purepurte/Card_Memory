@@ -113,7 +113,28 @@ function turn(e){
       cardFirst.className += ' correct';
       div.className += ' correct';
       countUnit++;
-     
+      if (countUnit == cards.length){
+         finish(); 
+       
+var dialog = document.getElementById('dialog');
+var yes = document.getElementById('yes');
+var no = document.getElementById('no'); 
+ 
+//ボタンがクリックされたらダイアログを表示する
+btn.addEventListener('click', function() {
+    dialog.style.display = 'block';
+    this.style.display = 'none';
+})
+yes.addEventListener('click', function closeWindow() {
+  window.open('about:_blank', '_self').close()
+});
+ 
+
+no.addEventListener('click', function koshin(){
+  location.reload();
+});
+
+    }
       // 一致しない場合
     }else{
       // カードを裏側に戻す
@@ -143,4 +164,10 @@ function showSecond(){
 
   var re = document.getElementById('result');
   re.innerHTML = str;
+}
+
+function finish(){
+  clearInterval(timer);
+  var btn = document.getElementById('btn');
+  btn.style.display = 'block';
 }
